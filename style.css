@@ -4,7 +4,6 @@ body {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    align-items: baseline;
     min-height: 100vh;
     margin: 0;
     padding: 0; 
@@ -73,10 +72,120 @@ nav a {
     transition: color 0.3s ease, transform 0.3s ease;
     border-radius: 5px;
 }
-
-nav a:hover {
-    color: #fdfeff;
-    transform: translateY(-2px);
-    letter-spacing: 2px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+nav a::before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
 }
+
+nav a:hover:before {
+    opacity: 1; 
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    width: 800px;
+    height: 900px;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+.QR {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 120%;
+    top:10%;
+    transform: translateY(-50%);
+
+}
+.link {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    right: 115%;
+    top:25%;
+}
+.link:hover{
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.scroll-down__btn {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 20%;
+    right: 50%;
+    bottom: 45%;
+    transform: translateX(-50%);
+    background: #fffeff;
+    padding: 10px 50px;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+.scroll-down__btn svg {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+.scroll-down__btn:hover{
+    color: #ff0000;
+    transition: color 0.3s ease;
+
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    margin: 0 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.Aboutme {
+    align-items: center;
+    max-width: 800px;
+    margin: 150px auto 50px auto; 
+}
+
+.Aboutme .skills ul li {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+}
+
+.Aboutme .contact-info a:hover {
+    text-decoration: underline;
+}
+
