@@ -112,15 +112,7 @@ h1 {
     transform: translateY(-50%);
 
 }
-.link {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    text-decoration: none;
-    color: black;
-    right: 115%;
-    top:25%;
-}
+
 .link:hover{
     color: #ffffff;
     transition: color 0.3s ease;
