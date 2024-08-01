@@ -173,6 +173,7 @@ ul li a:hover {
 }
 
 .Aboutme {
+    font-weight:100px;
     align-items: center;
     max-width: 800px;
     margin: 150px auto 50px auto; 
